@@ -11,8 +11,11 @@ https://github.com/ytoyoyama/interface_trykernel
 
 なお、以降の説明は FreeBSD 13.2 で動作確認した結果をもとに行っています。
 より詳細な情報は下記リンク先の記事を参照してください。
-- 1
-- 2
+
+- Raspberry Pi Pico のミニマムなクロス開発環境を FreeBSD に構築する<br>
+  https://retrotecture.jp/picolab/0010_toolchain.html
+- Raspberry Pi Pico の L チカプログラムをビルドして動かす<br>
+  https://retrotecture.jp/picolab/0020_blink_trial.html
 
 ## ビルド環境
 
@@ -20,7 +23,7 @@ https://github.com/ytoyoyama/interface_trykernel
 インストール方法は付録 A を参照してください。
 
 - arm-none-eabi-binutils 2.41
-- arm-none-eabi-gcc-13.2.0
+- arm-none-eabi-gcc 13.2.0
 - GNU Make 4.3
 
 ## サンプルプログラムのセットアップ
@@ -54,7 +57,7 @@ https://github.com/ytoyoyama/interface_trykernel
 % gmake
 ```
 
-ビルドに成功すると sect_3/build ディレクトリに ELF ファイルが生成されます。
+ビルドに成功すると sect_3/build ディレクトリに ELF ファイルが得られます。
 これを [UF2 形式](https://github.com/microsoft/uf2) に変換したい場合は
 付録 B を参照してください。
 UF2 ファイルを Pico のフラッシュメモリに書き込む方法は付録 C を参照してください。
