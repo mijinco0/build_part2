@@ -1,0 +1,12 @@
+target remote localhost:3333
+monitor reset init
+
+#break reset_hdr.c:181
+#break main.c:21
+#dashboard memory watch 0xD0000000 0x30
+#dashboard memory watch 0xE000E010 0x10
+
+define start
+    break Reset_Handler
+    continue
+end
