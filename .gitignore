@@ -1,3 +1,4 @@
 tools/elf2uf2
 libs/libaeabi-cortexm0.a
+*/build/
 */.gdb_history
