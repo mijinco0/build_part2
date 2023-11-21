@@ -1,7 +1,6 @@
 PRGNAME := hello
 ARCH = arm-none-eabi
 
-DEBUG := 0
 LIBAEABI := 0
 
 SRCROOTDIR := ../../part_2/sect_4
@@ -17,9 +16,7 @@ E2U = $(TOOLDIR)/elf2uf2
 
 CFLAGS = -Wall -march=armv6-m -mthumb -ffreestanding
 CFLAGS += -I$(SRCROOTDIR)/include
-ifneq ($(DEBUG),0)
-	CFLAGS += -g3 -O0
-endif
+CFLAGS += -g3 -O0
 ifeq ($(MAKECMDGOALS),preproc)
 	CFLAGS += -E
 else
